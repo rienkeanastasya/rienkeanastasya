@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Situs Web Pribadi Rienke</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Web Pribadi Rienke</h1>
+        <nav>
+            <ul>
+                <li><a onclick="showSection('home')">HOME</a></li>
+                <li><a onclick="showSection('pendidikan')">PENDIDIKAN</a></li>
+                <li><a onclick="showSection('jadwal-kuliah')">JADWAL KULIAH</a></li>
+                <li><a onclick="showSection('aktivitas')">AKTIVITAS</a></li>
+                <li><a onclick="showSection('lainnya')">LAINNYA</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <h2>Nama    : Rienke Anastasya Wyanti <br>
+            NIM     : 210601110103 <br>
+            Alamat  : Pujon, Kabupaten Malang <br>
+            Agama   : Islam <br>
+            TTL     : Batu, 15 Juni 2003
+        </h2>
+    </section>
+
+    <section id="pendidikan">
+        <h2>Riwayat Pendidikan yang saya tempuh: <br>
+            -TK ADHI PRAKARSA <br>
+            -SD NEGERI BENDOSARI 03 <br>
+            -SMP NEGERI 01 NGANTANG <br>
+            -MA NEGERI KOTA BATU <br>
+            -UNIVERSITAS NEGERI MAULANA MALIK IBRAHIM MALANG <br>
+        </h2>
+    </section>
+
+    <section id="jadwal-kuliah">
+        <h2>
+            <table>
+                <tr>
+                    <th>Mata Kuliah</th>
+                    <th>SKS</th>
+                    <th>Dosen</th>
+                    <th>Hari</th>
+                    <th>Pukul</th>
+                    <th>Ruang</th>
+                </tr>
+                <tr>
+                    <td>Analisis Numerik</td>
+                    <td>3</td>
+                    <td>Muhammad Khudzaifah, M.Si</td>
+                    <td>Senin</td>
+                    <td>06.30-09.00</td>
+                    <td>B.207</td>
+                </tr>
+                <tr>
+                    <td>Praktikum Pemrograman Komputer II</td>
+                    <td>1</td>
+                    <td>Mohammad Nafie Jauhari, M.Si</td>
+                    <td>Senin</td>
+                    <td>09.00-10.40</td>
+                    <td>Laboratorium Komputer Dasar</td>
+                </tr>
+                <tr>
+                    <td>Riset Operasi</td>
+                    <td>2</td>
+                    <td>Hawdzah Saadati, M.Si</td>
+                    <td>Senin</td>
+                    <td>12.20-14.00</td>
+                    <td>Laboratorium Pemodelan</td>
+                </tr>
+                <tr>
+                    <td>Statistika Matematika</td>
+                    <td>3</td>
+                    <td>Prof.Dr.Sri Harini, M.Si</td>
+                    <td>Selasa</td>
+                    <td>09.00-11.30</td>
+                    <td>Ruang Diskusi</td>
+                </tr>
+                <tr>
+                    <td>Pemodelan Matematika</td>
+                    <td>2</td>
+                    <td>Nurul Anggraeni Hidayati, S.Mat, M.Mat</td>
+                    <td>Rabu</td>
+                    <td>06.30-08.10</td>
+                    <td>B.208</td>
+                </tr>
+                <tr>
+                    <td>Praktikum Pemodelan Matematika</td>
+                    <td>2</td>
+                    <td>Dr.Usman Pagalay, M.Si</td>
+                    <td>Rabu</td>
+                    <td>09.00-11.40</td>
+                    <td>Laboratorium Komputer Dasar</td>
+                </tr>
+                <tr>
+                    <td>Geometri Analitik</td>
+                    <td>3</td>
+                    <td>Evawati Alisah, M.Pd</td>
+                    <td>Kamis</td>
+                    <td>06.30-09.00</td>
+                    <td>B.206</td>
+                </tr>
+                <tr>
+                    <td>Kapita Selekta Terapan</td>
+                    <td>2</td>
+                    <td>Juhari, M.Si</td>
+                    <td>Kamis</td>
+                    <td>14.00-15.40</td>
+                    <td>Ruang Meeting</td>
+                </tr>
+                <tr>
+                    <td>Pemrograman Komputer II</td>
+                    <td>2</td>
+                    <td>Mohammad Nafie Jauhari, M.Si</td>
+                    <td>Jum'at</td>
+                    <td>06.30-08.10</td>
+                    <td>B.205</td>
+                </tr>
+                <tr>
+                    <td>Analisis Kompleks</td>
+                    <td>3</td>
+                    <td>Dr,Khairur Rahman, M.Si</td>
+                    <td>Jum'at</td>
+                    <td>09.00-11.30</td>
+                    <td>B.208</td>
+                </tr>
+            </table>
+        </h2>
+    </section>
+
+    <section id="aktivitas">
+        <h2>KOMUNITAS <br>
+            -RUBY COMMUNITY <br>
+        </h2>
+    </section>
+
+    <section id="lainnya">
+        <h2>INSTAGRAM : @_rienkeanastasya <br>
+            TIKTOK    : @_rienkeanastasya
+        </h2>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Rienke Anastasya Wyanti</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Menampilkan bagian yang sesuai
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            var sectionToShow = document.getElementById(sectionId);
+            if (sectionToShow) {
+                sectionToShow.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
